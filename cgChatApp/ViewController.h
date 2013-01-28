@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextView *txtChatbox;
+@property (strong, nonatomic) IBOutlet UITextField *txtChatInput;
+
+- (IBAction)chatInputEnd:(id)sender;
+- (IBAction)btnHunter:(UIBarButtonItem *)sender;
+- (IBAction)btnPrey:(UIBarButtonItem *)sender;
+- (IBAction)btnLeader:(UIBarButtonItem *)sender;
 
 @end

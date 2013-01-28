@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27163B2616B4049700DF8B5B /* WebserviceConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 27163B2516B4049700DF8B5B /* WebserviceConnection.m */; };
 		27D87C6816B185460047ADE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D87C6716B185460047ADE4 /* UIKit.framework */; };
 		27D87C6A16B185460047ADE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D87C6916B185460047ADE4 /* Foundation.framework */; };
 		27D87C6C16B185460047ADE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D87C6B16B185460047ADE4 /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27163B2416B4049700DF8B5B /* WebserviceConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceConnection.h; sourceTree = "<group>"; };
+		27163B2516B4049700DF8B5B /* WebserviceConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebserviceConnection.m; sourceTree = "<group>"; };
 		27D87C6316B185460047ADE4 /* cgChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cgChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D87C6716B185460047ADE4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27D87C6916B185460047ADE4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -91,6 +94,8 @@
 				27D87C8216B185460047ADE4 /* MainStoryboard_iPad.storyboard */,
 				27D87C8516B185460047ADE4 /* ViewController.h */,
 				27D87C8616B185460047ADE4 /* ViewController.m */,
+				27163B2416B4049700DF8B5B /* WebserviceConnection.h */,
+				27163B2516B4049700DF8B5B /* WebserviceConnection.m */,
 				27D87C6E16B185460047ADE4 /* Supporting Files */,
 			);
 			path = cgChatApp;
@@ -180,6 +185,7 @@
 				27D87C7416B185460047ADE4 /* main.m in Sources */,
 				27D87C7816B185460047ADE4 /* AppDelegate.m in Sources */,
 				27D87C8716B185460047ADE4 /* ViewController.m in Sources */,
+				27163B2616B4049700DF8B5B /* WebserviceConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +312,7 @@
 				27D87C8C16B185460047ADE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
