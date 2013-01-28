@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>testCpChatApp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>27A1367216B690FA00EEB90C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>27D87C6216B185460047ADE4</key>
 		<dict>
 			<key>primary</key>

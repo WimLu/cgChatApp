@@ -15,13 +15,15 @@
 @end
 
 @implementation ViewController{
-    NSString *URL;
-    NSString *cbPreyHunter;
-    NSString *cbHunterHunter;
-    NSString *cbHunterLeader;
-    NSNumber *lastMessageID;
-    NSString *selectedChatBox;
 }
+
+//variabelen declareren
+int lastMessageID =0;
+NSString *cbPreyHunter;
+NSString *cbHunterHunter;
+NSString *cbHunterLeader;
+NSString *selectedChatBox;
+NSString *baseURL;
 
 //basisURL
 
@@ -29,28 +31,42 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    //basisURL
+    baseURL = @"http://webservice.citygamephl.be/CityGameWS/resources/generic/";
+    
     //chat berichten opvragen
     [self getMessages];
     //timer voor het opvragen van de chatberichten
-    NSTimer *chatMessages = [NSTimer scheduledTimerWithTimeInterval:10 target:self
-                                                       selector:@selector(getMessages) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(getMessages:) userInfo:nil repeats: YES];
 }
 
 -(void)getMessages{
+    
+    @try {
+        //om te testen gewoon rechtstreeks parameters maken
+        NSString * gameID = @"1";
+        NSString * role = @"Jager";
+        
+        //parameters toevoegen aan de url
+        NSString *strURL = [baseURL stringByAppendingString:[NSString stringWithFormat:@"getMessages/%@/%@/%@",gameID,role,[NSString stringWithFormat:@"%d",lastMessageID]]];
+        
+        NSLog(@"%@",strURL);
+        NSURL * webserviceURL = [NSURL URLWithString:strURL];
+        
+        dispatch_async(kBgQueue, ^{
+            NSData* data = [NSData dataWithContentsOfURL:
+                            webserviceURL];
+            [self performSelectorOnMainThread:@selector(fetchedMessages:)
+                                   withObject:data waitUntilDone:YES];
+        });
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@",exception);
+        
+    }
+    @finally {
+    }
 
-    //om te testen gewoon rechtstreeks parameters maken
-    NSString * gameID = @"1";
-    NSString * role = @"Jager";
-    NSString * lastMessageID = @"3";
-    
-    NSURL * webserviceURL = [NSURL URLWithString:@"http://webservice.citygamephl.be/CityGameWS/resources/generic/getMessages/1/Jager/3"];
-    
-    dispatch_async(kBgQueue, ^{
-        NSData* data = [NSData dataWithContentsOfURL:
-                        webserviceURL];
-        [self performSelectorOnMainThread:@selector(fetchedMessages:)
-                               withObject:data waitUntilDone:YES];
-    });
     //[self getMessages:gameID chatbox:chatbox lastMessageID:lastMessageID];
 }
 
@@ -103,13 +119,18 @@
 
 - (IBAction)btnHunter:(UIBarButtonItem *)sender {
     selectedChatBox = cbHunterHunter;
+    self.txtChatbox.text = selectedChatBox;
+
 }
 
 - (IBAction)btnPrey:(UIBarButtonItem *)sender {
    selectedChatBox = cbPreyHunter;
+    self.txtChatbox.text = selectedChatBox;
+
 }
 
 - (IBAction)btnLeader:(UIBarButtonItem *)sender {
-        selectedChatBox = cbHunterLeader;
+    selectedChatBox = cbHunterLeader;
+    self.txtChatbox.text = selectedChatBox;
 }
 @end

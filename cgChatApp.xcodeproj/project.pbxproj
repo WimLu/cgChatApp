@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		27163B2616B4049700DF8B5B /* WebserviceConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 27163B2516B4049700DF8B5B /* WebserviceConnection.m */; };
+		27A1367516B690FA00EEB90C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A1367416B690FA00EEB90C /* SenTestingKit.framework */; };
+		27A1367616B690FA00EEB90C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D87C6716B185460047ADE4 /* UIKit.framework */; };
+		27A1367716B690FA00EEB90C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D87C6916B185460047ADE4 /* Foundation.framework */; };
+		27A1367D16B690FA00EEB90C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27A1367B16B690FA00EEB90C /* InfoPlist.strings */; };
+		27A1368016B690FA00EEB90C /* testCpChatApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A1367F16B690FA00EEB90C /* testCpChatApp.m */; };
 		27D87C6816B185460047ADE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D87C6716B185460047ADE4 /* UIKit.framework */; };
 		27D87C6A16B185460047ADE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D87C6916B185460047ADE4 /* Foundation.framework */; };
 		27D87C6C16B185460047ADE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D87C6B16B185460047ADE4 /* CoreGraphics.framework */; };
@@ -25,6 +30,13 @@
 /* Begin PBXFileReference section */
 		27163B2416B4049700DF8B5B /* WebserviceConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceConnection.h; sourceTree = "<group>"; };
 		27163B2516B4049700DF8B5B /* WebserviceConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebserviceConnection.m; sourceTree = "<group>"; };
+		27A1367316B690FA00EEB90C /* testCpChatApp.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testCpChatApp.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A1367416B690FA00EEB90C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		27A1367A16B690FA00EEB90C /* testCpChatApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testCpChatApp-Info.plist"; sourceTree = "<group>"; };
+		27A1367C16B690FA00EEB90C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27A1367E16B690FA00EEB90C /* testCpChatApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testCpChatApp.h; sourceTree = "<group>"; };
+		27A1367F16B690FA00EEB90C /* testCpChatApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testCpChatApp.m; sourceTree = "<group>"; };
+		27A1368116B690FA00EEB90C /* testCpChatApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testCpChatApp-Prefix.pch"; sourceTree = "<group>"; };
 		27D87C6316B185460047ADE4 /* cgChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cgChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D87C6716B185460047ADE4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27D87C6916B185460047ADE4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,6 +57,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		27A1366F16B690FA00EEB90C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A1367516B690FA00EEB90C /* SenTestingKit.framework in Frameworks */,
+				27A1367616B690FA00EEB90C /* UIKit.framework in Frameworks */,
+				27A1367716B690FA00EEB90C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27D87C6016B185460047ADE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,10 +80,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27A1367816B690FA00EEB90C /* testCpChatApp */ = {
+			isa = PBXGroup;
+			children = (
+				27A1367E16B690FA00EEB90C /* testCpChatApp.h */,
+				27A1367F16B690FA00EEB90C /* testCpChatApp.m */,
+				27A1367916B690FA00EEB90C /* Supporting Files */,
+			);
+			path = testCpChatApp;
+			sourceTree = "<group>";
+		};
+		27A1367916B690FA00EEB90C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27A1367A16B690FA00EEB90C /* testCpChatApp-Info.plist */,
+				27A1367B16B690FA00EEB90C /* InfoPlist.strings */,
+				27A1368116B690FA00EEB90C /* testCpChatApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		27D87C5816B185460047ADE4 = {
 			isa = PBXGroup;
 			children = (
 				27D87C6D16B185460047ADE4 /* cgChatApp */,
+				27A1367816B690FA00EEB90C /* testCpChatApp */,
 				27D87C6616B185460047ADE4 /* Frameworks */,
 				27D87C6416B185460047ADE4 /* Products */,
 			);
@@ -71,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				27D87C6316B185460047ADE4 /* cgChatApp.app */,
+				27A1367316B690FA00EEB90C /* testCpChatApp.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +125,7 @@
 				27D87C6716B185460047ADE4 /* UIKit.framework */,
 				27D87C6916B185460047ADE4 /* Foundation.framework */,
 				27D87C6B16B185460047ADE4 /* CoreGraphics.framework */,
+				27A1367416B690FA00EEB90C /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,6 +163,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		27A1367216B690FA00EEB90C /* testCpChatApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A1368416B690FA00EEB90C /* Build configuration list for PBXNativeTarget "testCpChatApp" */;
+			buildPhases = (
+				27A1366E16B690FA00EEB90C /* Sources */,
+				27A1366F16B690FA00EEB90C /* Frameworks */,
+				27A1367016B690FA00EEB90C /* Resources */,
+				27A1367116B690FA00EEB90C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testCpChatApp;
+			productName = testCpChatApp;
+			productReference = 27A1367316B690FA00EEB90C /* testCpChatApp.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		27D87C6216B185460047ADE4 /* cgChatApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27D87C8A16B185460047ADE4 /* Build configuration list for PBXNativeTarget "cgChatApp" */;
@@ -157,11 +220,20 @@
 			projectRoot = "";
 			targets = (
 				27D87C6216B185460047ADE4 /* cgChatApp */,
+				27A1367216B690FA00EEB90C /* testCpChatApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		27A1367016B690FA00EEB90C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A1367D16B690FA00EEB90C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27D87C6116B185460047ADE4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -177,7 +249,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		27A1367116B690FA00EEB90C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		27A1366E16B690FA00EEB90C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A1368016B690FA00EEB90C /* testCpChatApp.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27D87C5F16B185460047ADE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,6 +288,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		27A1367B16B690FA00EEB90C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27A1367C16B690FA00EEB90C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		27D87C7016B185460047ADE4 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -219,6 +323,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		27A1368216B690FA00EEB90C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testCpChatApp/testCpChatApp-Prefix.pch";
+				INFOPLIST_FILE = "testCpChatApp/testCpChatApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		27A1368316B690FA00EEB90C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testCpChatApp/testCpChatApp-Prefix.pch";
+				INFOPLIST_FILE = "testCpChatApp/testCpChatApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		27D87C8816B185460047ADE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -296,6 +430,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		27A1368416B690FA00EEB90C /* Build configuration list for PBXNativeTarget "testCpChatApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A1368216B690FA00EEB90C /* Debug */,
+				27A1368316B690FA00EEB90C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		27D87C5D16B185460047ADE4 /* Build configuration list for PBXProject "cgChatApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
